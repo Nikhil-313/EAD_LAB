@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f0ff; /* light purple background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff; /* white form background */
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(123, 104, 238, 0.2); /* violet shadow */
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #6a0dad; /* dark violet heading */
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333333; /* dark text */
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #b69cd6; /* soft violet border */
+      border-radius: 5px;
+      background-color: #f3f0fa; /* light violet input background */
+    }
+
+    .gender-options {
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .gender-options label {
+      font-weight: normal;
+      color: #333;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #6a0dad; /* violet button */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4b0082; /* darker violet on hover */
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Register</h2>
+  <form action="#" method="post">
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm">Confirm Password</label>
+    <input type="password" id="confirm" name="confirm" required>
+
+    <label>Gender</label>
+    <div class="gender-options">
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="terms" required>
+      <label for="terms">I agree to the terms and conditions</label>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+</body>
+</html>
