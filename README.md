@@ -73,8 +73,8 @@ The backend is a Node.js/Express server with JWT authentication functionality.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/Nikhil-313/EAD_LAB.git
-cd EAD_LAB
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
 ```
 
 ### Step 2: Navigate to Backend Directory

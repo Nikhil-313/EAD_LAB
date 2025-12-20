@@ -33,6 +33,13 @@ REFRESH_TOKEN_SECRET=yourRefreshSecretKey123
 PORT=3000
 ```
 
+**Example with secure secrets:**
+```env
+ACCESS_TOKEN_SECRET=5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+REFRESH_TOKEN_SECRET=7c9e6679f9c3a5e8d3a9f8c6e5d4b3a2c1e8f7d6a5c4b3e2d1a9b8c7e6f5d4a3
+PORT=3000
+```
+
 **⚠️ Important:** Change these secrets before deploying to production!
 
 Generate secure secrets:
@@ -195,7 +202,7 @@ curl -X POST http://localhost:3000/register \
 curl -X POST http://localhost:3000/login \
   -H "Content-Type: application/json" \
   -d '{"username":"john","password":"secret123"}' \
-  -c cookies.txt -v
+  -c cookies.txt
 ```
 
 Copy the `accessToken` from the response.
@@ -347,9 +354,11 @@ curl -X POST http://localhost:3000/logout \
 **Port already in use:**
 ```bash
 # Change PORT in .env file or kill the process:
-# On Windows:
+
+# On Windows (find the process using port 3000):
 netstat -ano | findstr :3000
-taskkill /PID <PID> /F
+# Note the PID (last column), then kill it:
+taskkill /PID <replace_with_actual_PID> /F
 
 # On Mac/Linux:
 lsof -ti:3000 | xargs kill -9

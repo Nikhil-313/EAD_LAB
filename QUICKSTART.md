@@ -105,7 +105,10 @@ npx react-native init MyApp
 ### Option 2: Create Native Android App
 - Use Android Studio
 - Create a new project
-- Use Retrofit or OkHttp to call the backend API at `http://10.0.2.2:3000` (for emulator) or your computer's IP address
+- Use Retrofit or OkHttp to call the backend API
+  - **For Android Emulator:** Use `http://10.0.2.2:3000` (this is a special alias to your host machine's localhost)
+  - **For Physical Device:** Use your computer's IP address on the same network (e.g., `http://192.168.1.100:3000`)
+    - Find your IP with `ipconfig` (Windows) or `ifconfig` (Mac/Linux)
 
 ### Option 3: Use the HTML files in a WebView
 - Create an Android app with a WebView component
